@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1524375591491,
+    "name": "POST form",
+    "url": "http://127.0.0.1:3000/form",
+    "method": "POST",
+    "payload": "{\n\"questionnaireId\": \"5adc19e40dce6a1034696db7\",\n\"name\": \"section_form_one\",\n\"dataSchema\": \n     {\n\t\"title\": \"\",\n\t\"description\": \"In this section we would like to understand your headaches and all associated features you experience in more detail. We will ask you about the levels of pain you experience and any symptoms affecting your eyes, ears, speech, balance, nose and temperature feeling. We will also ask about what triggers your headaches such as excercise, habits or foods. This information will further inform how we can best provide care to you and may help you understand your headaches better.\",\n\t\"type\": \"object\"\n     }\n}",
+    "headers": {
+      "1524374001293": {
+        "id": 1524374001293,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524374001294": {
+        "id": 1524374001294,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375591492
+  },
+  {
+    "id": 1524375629081,
+    "name": "GET forms",
+    "url": "http://127.0.0.1:3000/form",
+    "method": "GET",
+    "payload": "",
+    "headers": {
+      "1524374001293": {
+        "id": 1524374001293,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524374001294": {
+        "id": 1524374001294,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375629082
+  },
+  {
+    "id": 1524375707636,
+    "name": "POST questinnaire",
+    "url": "http://127.0.0.1:3000/questionnaire",
+    "method": "POST",
+    "payload": "{\n\"title\": \"Questionnaire One\",\n\"description\": \"Demo Questionnaire\",\n\"type\": \"pro\" \n}",
+    "headers": {
+      "1524375684738": {
+        "id": 1524375684738,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524375684739": {
+        "id": 1524375684739,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375707636
+  },
+  {
+    "id": 1524375734390,
+    "name": "GET questionnaire",
+    "url": "http://127.0.0.1:3000/questionnaire",
+    "method": "GET",
+    "payload": "",
+    "headers": {
+      "1524375684738": {
+        "id": 1524375684738,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524375684739": {
+        "id": 1524375684739,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375734391
+  },
+  {
+    "id": 1524375834406,
+    "name": "POST section",
+    "url": "http://127.0.0.1:3000/section",
+    "method": "POST",
+    "payload": "{\n\"formId\": \"5adb96680e465823d24f3092\",\n\"name\": \"hd2_headache_symptom_section\",\n\"dataSchema\": \n{\n\t\t\t\t\"title\": \"Section 1: When you have a headache, do you experience any of the following?\",\n\t\t\t\t\"type\": \"object\",\n\t\t\t\t\"properties\": {\n\t\t\t\t\t\"hd2_nausea\": {\n\t\t\t\t\t\t\"title\": \"Nausea\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_vomiting\": {\n\t\t\t\t\t\t\"title\": \"Vomiting\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_Nonvertigo\": {\n\t\t\t\t\t\t\"title\": \"Dizziness: Nonvertigo (The feeling of unsteadiness, lightheadedness, motion sickness)\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_Vertigo\": {\n\t\t\t\t\t\t\"title\": \"Vertigo/Dizziness (The feeling that you or your environment is moving or spinning; an illusion of movement)\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_neckpain\": {\n\t\t\t\t\t\t\"title\": \"Neck pain or stiffness\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_lightsensitivity\": {\n\t\t\t\t\t\t\"title\": \"Sensitivity to light\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_noisesenstivity\": {\n\t\t\t\t\t\t\"title\": \"Sensitivity to noise\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_smellsensitivity\": {\n\t\t\t\t\t\t\"title\": \"Sensitivity to smell\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_Paworse\": {\n\t\t\t\t\t\t\"title\": \"Pain made worse by routine physical activity\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_oneside\": {\n\t\t\t\t\t\t\"title\": \"Pain on one side of head only\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\t\t\t\t\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_Maworse\": {\n\t\t\t\t\t\t\"title\": \"Pain made worse by routine mental activity (e.g. concentrating, reading)\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_weakness\": {\n\t\t\t\t\t\t\"title\": \"Weakness on one side (e.g. one side of face, one arm, one leg; do not include generalized weakness or fatigue)\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_lights\": {\n\t\t\t\t\t\t\"title\": \"Seeing shimmering lights, lines, dark spots, other shapes or colors\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_onesidenumb\": {\n\t\t\t\t\t\t\"title\": \"One-sided numbness of lips, tongue, fingers, or legs\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_worddiff\": {\n\t\t\t\t\t\t\"title\": \"Difficulty finding words, expressing yourself verbally or in writing, or fully understanding what others are saying\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_redeye\": {\n\t\t\t\t\t\t\"title\": \"Red or bloodshot eye\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_redbloodshoteyeside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does red or bloodshot eye occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_eyecry\" : {\n\t\t\t\t\t\t\"title\" : \"Tearing/crying from the eye\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_teraingcryingside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the tearing/crying from the eye occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_droop\" : {\n\t\t\t\t\t\t\"title\" : \"Eyelid drooping\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_eyelideyeliddroopingside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the eyelid drooping occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_eyeswell\" : {\n\t\t\t\t\t\t\"title\" : \"Swelling around eye\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_eyelidswellingside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the swelling around eye occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_runnynose\" : {\n\t\t\t\t\t\t\"title\" : \"Runny Nose \",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_runnynoseside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the runny nose occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_suffnasal\" : {\n\t\t\t\t\t\t\"title\" : \"Nasal congestion/stuffiness\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_nasalcongestionstuffinessside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the nasal congestion/stuffiness occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_facered\" : {\n\t\t\t\t\t\t\"title\" : \"Forehead and/or facial sweating\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_facialforeheadsweatingside\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the forehead and/or facial sweating occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_paleface\" : {\n\t\t\t\t\t\t\"title\" : \"Forehead and/or facial flushing/redness\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_earhd2lll\" : {\n\t\t\t\t\t\t\"title\" : \"Sensation of fullness in the ear\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_earhd2llnesssensation\" : {\n\t\t\t\t\t\t\"title\" : \"On which side does the sensation of fullness in the ear occur?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_smallerpupill\" : {\n\t\t\t\t\t\t\"title\" : \"Pupil is smaller than usual (i.e. constriction of the pupil)\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_smallerpupil\" : {\n\t\t\t\t\t\t\"title\" : \"On which side is the pupil smaller than usual?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_largerpupill\" : {\n\t\t\t\t\t\t\"title\" : \"Pupil is larger than usual (i.e. dilation of the pupil)\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_largerpupil\" : {\n\t\t\t\t\t\t\"title\" : \"On which side is the pupil larger than usual?\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/headacheTypeEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_restlessagitatedstate\" : {\n\t\t\t\t\t\t\"title\" : \"Restless/agitated state (e.g. pacing, rocking, hitting the head)\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_feelingcolder\" : {\n\t\t\t\t\t\t\"title\" : \"Feeling colder than normal\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_feelinghotter\" : {\n\t\t\t\t\t\t\"title\" : \"Feeling hotter than normal\",\n\t\t\t\t\t\t\"$ref\" : \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_awakenfromsleep\": {\n\t\t\t\t\t\t\"title\": \"My headaches wake me up from sleep\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_headacheonawakening\": {\n\t\t\t\t\t\t\"title\": \"My headaches are present when I normally wake up\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_morningheadache\": {\n\t\t\t\t\t\t\"title\": \"My headaches occur in the morning after I am awake and out of bed\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t},\n\t\t\t\t\t\"hd2_afternooneveningheadache\": {\n\t\t\t\t\t\t\"title\": \"My headaches occur in the afternoon or evening\",\n\t\t\t\t\t\t\"$ref\": \"#/definitions/symptomFrequencyEnum\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\"uiSchema\" : \n{\n\t\t\t\"ui:order\": [\n\t\t\t\t\"hd2_nausea\",\n\t\t\t\t\"hd2_vomiting\",\n\t\t\t\t\"hd2_Nonvertigo\",\n\t\t\t\t\"hd2_Vertigo\",\n\t\t\t\t\"hd2_neckpain\",\n\t\t\t\t\"hd2_lightsensitivity\",\n\t\t\t\t\"hd2_noisesenstivity\",\n\t\t\t\t\"hd2_smellsensitivity\",\n\t\t\t\t\"hd2_Paworse\",\n\t\t\t\t\"hd2_oneside\",\n\t\t\t\t\"hd2_Maworse\",\n\t\t\t\t\"hd2_weakness\",\n\t\t\t\t\"hd2_lights\",\n\t\t\t\t\"hd2_onesidenumb\",\n\t\t\t\t\"hd2_worddiff\",\n\t\t\t\t\"hd2_redeye\",\n\t\t\t\t\"hd2_redbloodshoteyeside\",\n\t\t\t\t\"hd2_eyecry\",\n\t\t\t\t\"hd2_teraingcryingside\",\n\t\t\t\t\"hd2_droop\",\n\t\t\t\t\"hd2_eyelideyeliddroopingside\",\n\t\t\t\t\"hd2_eyeswell\",\n\t\t\t\t\"hd2_eyelidswellingside\",\n\t\t\t\t\"hd2_runnynose\",\n\t\t\t\t\"hd2_runnynoseside\",\n\t\t\t\t\"hd2_suffnasal\",\n\t\t\t\t\"hd2_nasalcongestionstuffinessside\",\n\t\t\t\t\"hd2_facered\",\n\t\t\t\t\"hd2_facialforeheadsweatingside\",\n\t\t\t\t\"hd2_paleface\",\n\t\t\t\t\"hd2_earhd2lll\",\n\t\t\t\t\"hd2_earhd2llnesssensation\",\n\t\t\t\t\"hd2_smallerpupill\",\n\t\t\t\t\"hd2_smallerpupil\",\n\t\t\t\t\"hd2_largerpupill\",\n\t\t\t\t\"hd2_largerpupil\",\n\t\t\t\t\"hd2_restlessagitatedstate\",\n\t\t\t\t\"hd2_feelingcolder\",\n\t\t\t\t\"hd2_feelinghotter\",\n\t\t\t\t\"hd2_awakenfromsleep\",\n\t\t\t\t\"hd2_headacheonawakening\",\n\t\t\t\t\"hd2_morningheadache\",\n\t\t\t\t\"hd2_afternooneveningheadache\"\n\t\t\t],\n\t\t\t\"hd2_nausea\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_vomiting\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_Nonvertigo\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_Vertigo\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_neckpain\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_lightsensitivity\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_noisesenstivity\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_smellsensitivity\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_Paworse\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_oneside\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_Maworse\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_weakness\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_lights\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_onesidenumb\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_worddiff\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_redeye\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_redbloodshoteyeside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_redeye\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_eyecry\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_teraingcryingside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_eyecry\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_droop\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_eyelideyeliddroopingside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_droop\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_eyeswell\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_eyelidswellingside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_eyeswell\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_runnynose\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_runnynoseside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_runnynose\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_suffnasal\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_nasalcongestionstuffinessside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_suffnasal\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_facered\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_facialforeheadsweatingside\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_facered\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_paleface\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_earhd2lll\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_earhd2llnesssensation\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_earhd2lll\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_smallerpupill\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_smallerpupil\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_smallerpupill\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_largerpupill\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_largerpupil\": {\n\t\t\t\t\"ui:widget\": \"select\",\n\t\t\t\t\"condition\": {   \n\t\t\t\t\t\"hd2_headache_symptom_section.hd2_largerpupill\": {\"$in\": [1, 2, 3, 4]}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"hd2_restlessagitatedstate\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_feelingcolder\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_feelinghotter\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_awakenfromsleep\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_headacheonawakening\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_morningheadache\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t},\n\t\t\t\"hd2_afternooneveningheadache\": {\n\t\t\t\t\"ui:widget\": \"select\"\n\t\t\t}\n\t\t} \n}",
+    "headers": {
+      "1524375780508": {
+        "id": 1524375780508,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524375780509": {
+        "id": 1524375780509,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375834407
+  },
+  {
+    "id": 1524375865145,
+    "name": "GET section",
+    "url": "http://127.0.0.1:3000/section",
+    "method": "GET",
+    "payload": "",
+    "headers": {
+      "1524375780508": {
+        "id": 1524375780508,
+        "name": "Accept",
+        "value": "application/json, text/plain, */*"
+      },
+      "1524375780509": {
+        "id": 1524375780509,
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    },
+    "auth": {
+      "value": ""
+    },
+    "date": 1524375865145
+  }
+]
