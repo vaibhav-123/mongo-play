@@ -4,10 +4,10 @@ var db = require('./db');
 var schema = require('./schema');
 var bodyParser = require('body-parser');
 var app = express();
- 
+
 // parse application/json
 app.use(bodyParser.json())
- 
+
 // Get all Questionnaire
 app.post('/questionnaire', function (req, res) {
 
@@ -108,7 +108,12 @@ app.post('/section', function (req, res) {
 		
 		if (form) {
 			sectionInstance.save().then((section) => {
-				return Promise.all([form.update({ $push: { sections: section._id } }), section]);
+				return Promise.all([
+									form.update({ 
+										$push: { sections: { id: section._id, title: section.dataSchema.title } } 
+									}), 
+									section
+								]);
 			}).then(values => {
 				var section = values[1];
 				res.json(section);
@@ -125,20 +130,23 @@ app.post('/section', function (req, res) {
 app.get('/section/:formId', function (req, res) {
 
 	db.form.findOne({_id: req.params.formId}).then((form) => {
-		return Promise.all([db.section.find({_id: { $in : form.sections }}), form]);
+		var sectionIds  = form.sections.map(function(section) { return section.id } );
+		return Promise.all([db.section.find({_id: { $in : sectionIds }}), form]);
 	}).then(values => {
 		var formSections = values[0];
 		var form = values[1];
+		form.dataSchema.properties = {};
+		form.uiSchema = {};
+		var uiOrder = [];
 
-		_.each(formSections, (formSection) => {
-			form.dataSchema.properties = {};
-			form.formData = {};
-			form.uiSchema = {};
-			form.dataSchema.properties[formSection.name] = formSection.dataSchema;
-			form.uiSchema[formSection.name] = formSection.uiSchema;
-			form.formData[formSection.name] = formSection.formData;
-		})
+		_.each(formSections, (section) => {
+			form.dataSchema.properties[section.name] = section.dataSchema;
+			form.uiSchema[section.name] = section.uiSchema;
+			uiOrder.push(section.name);
+		});
 
+		form.uiSchema["ui:order"] = uiOrder;
+		
 		res.json(form);
 	}).catch((error) => {
 		console.log(error);
@@ -146,9 +154,9 @@ app.get('/section/:formId', function (req, res) {
 	});
 });
 
-app.get('/section/:formId/:sectionName', function (req, res) {
+app.get('/section/:formId/:sectionId', function (req, res) {
 
-	db.section.findOne({formId: req.params.formId, name: req.params.sectionName}).then((section) => {
+	db.section.findOne({formId: req.params.formId, _id: req.params.sectionId}).then((section) => {
 		res.json(section);
 	}).catch((error) => {
 		console.log(error);
